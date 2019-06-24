@@ -1,0 +1,17 @@
+title Noten luominen SPA versiolla
+
+selain->palvelin: HTTP POST https://fullstack-exampleapp.herokuapp.com/new_note_spa
+
+note over selain
+Selain päivittää uuden noten taulukkoonsa
+ja myös lähettää requestin serverille
+end note
+
+note over palvelin
+Palvelin saa pyynnön mukana JSON dataa:
+Request payload: {"content":"ja taas","date":"2019-06-24T08:54:15.482Z"}
+Palvelin luo uuden noten taulukkoonsa
+end note
+
+palvelin-->selain: {"message":"note created"}
+
