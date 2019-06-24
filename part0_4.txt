@@ -1,0 +1,24 @@
+title Noten tallennus
+
+selain->palvelin: HTTP POST https://fullstack-exampleapp.herokuapp.com/new_note
+
+note over palvelin: 
+Pavelin luo uuden väliaikaisen notes olion taulukkoonsa
+POST pyynnön mukana tulleen HTTP requestin req.body kentästä 
+end note
+
+palvelin->selain: uudelleenohjauspyyntö osoitteesta /notes
+
+note over selain: 
+Selain lataa notes sivun uudelleen
+end note
+
+selain->palvelin: HTTP GET https://fullstack-exampleapp.herokuapp.com/notes
+palvelin-->selain: HTML-koodi
+selain->palvelin: HTTP GET https://fullstack-exampleapp.herokuapp.com/main.css
+palvelin-->selain: main.css
+selain->palvelin: HTTP GET https://fullstack-exampleapp.herokuapp.com/main.js
+palvelin-->selain: main.js
+selain->palvelin: HTTP GET https://fullstack-exampleapp.herokuapp.com/data.json
+palvelin-->selain: [{ "content":"HTML is easy","date":"2019-05-23T17:30:31.098Z" }, ...]
+
